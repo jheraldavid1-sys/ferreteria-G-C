@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería G&C</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<nav class="barra-navegacion">
+    <div class="contenedor-nav">
+        <span class="logo-nombre">🔩 Ferretería G&C</span>
+        <ul class="menu">
+            <li><a class="boton-menu activo" data-pagina="inicio">🏠 Inicio</a></li>
+            <li><a class="boton-menu" data-pagina="productos">🛒 Productos</a></li>
+            <li><a class="boton-menu" data-pagina="contacto">📞 Contacto</a></li>
+            <li><button id="abrir-carrito" class="btn-carrito">🛒 <span id="numero-carrito">0</span></button></li>
+        </ul>
+    </div>
+</nav>
+
+<section id="inicio" class="pagina activa">
+    <div class="contenedor-inicio">
+        <div class="caja-bienvenida">
+            <img src="logo.png.jpeg" alt="Ferretería G&C" class="logo-principal">
+            <h1>Bienvenidos a <span>Ferretería G&C</span></h1>
+            <p class="subtitulo">Construyendo confianza desde Cochabamba 🏗️</p>
+            <div class="destacados">
+                <div class="item-destacado">
+                    <span class="icono-dest">✅</span>
+                    <p>Calidad garantizada</p>
+                </div>
+                <div class="item-destacado">
+                    <span class="icono-dest">💰</span>
+                    <p>Precios justos</p>
+                </div>
+                <div class="item-destacado">
+                    <span class="icono-dest">🚚</span>
+                    <p>Pedidos por WhatsApp</p>
+                </div>
+                <div class="item-destacado">
+                    <span class="icono-dest">📍</span>
+                    <p>Cochabamba, Bolivia</p>
+                </div>
+            </div>
+            <button class="boton-ver" data-pagina="productos">Ver nuestro catálogo →</button>
+        </div>
+    </div>
+</section>
+
+<section id="productos" class="pagina">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">🛒 Nuestros Productos</h2>
+        <p class="descripcion-seccion">Todo lo que necesitas para tu obra, reparación o mejora del hogar</p>
+        
+        <div class="filtros">
+            <button class="filtro activo" data-cat="todos">🌟 Todos</button>
+            <button class="filtro" data-cat="herramientas">🔧 Herramientas</button>
+            <button class="filtro" data-cat="materiales">🧱 Materiales</button>
+            <button class="filtro" data-cat="electricidad">⚡ Electricidad</button>
+            <button class="filtro" data-cat="plomeria">🚰 Plomería</button>
+        </div>
+        
+        <div id="lista-productos" class="cuadricula"></div>
+    </div>
+</section>
+
+<section id="contacto" class="pagina">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">📞 Contáctanos</h2>
+        <p class="descripcion-seccion">Estamos aquí para ayudarte, escríbenos sin compromiso</p>
+        
+        <div class="cuadricula-contacto">
+            <div class="tarjeta-contacto">
+                <span class="icono-contacto">📍</span>
+                <h3>Ubicación</h3>
+                <p>Vinto Sexta Parte, Cochabamba, Bolivia</p>
+                <p class="detalle-contacto">Zona central — Te esperamos</p>
+            </div>
+            
+            <div class="tarjeta-contacto">
+                <span class="icono-contacto">🕐</span>
+                <h3>Horarios</h3>
+                <p>Lunes a Viernes: 8:00 a.m. – 6:00 p.m.</p>
+                <p>Sábados: 8:00 a.m. – 1:00 p.m.</p>
+                <p class="detalle-contacto">Domingos: Cerrado</p>
+            </div>
+            
+            <div class="tarjeta-contacto destacada">
+                <span class="icono-contacto">💬</span>
+                <h3>WhatsApp</h3>
+                <p class="numero-whatsapp">67464984</p>
+                <p class="detalle-contacto">Envíanos tu lista y preparamos tu pedido ✅</p>
+            </div>
+            
+            <div class="tarjeta-contacto">
+                <span class="icono-contacto">🛒</span>
+                <h3>¿Cómo comprar?</h3>
+                <p>1. Agrega productos al carrito</p>
+                <p>2. Envía por WhatsApp</p>
+                <p class="detalle-contacto">3. Acordamos la entrega 🤝</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="ventana-carrito" class="ventana-carrito">
+    <div class="contenido-carrito">
+        <h3>🛒 Tu Carrito</h3>
+        <button id="cerrar-carrito" class="btn-cerrar">✕</button>
+        <div id="lista-items"></div>
+        <p class="total"><strong>Total: Bs. <span id="precio-total">0</span></strong></p>
+        <button id="enviar-whatsapp">💬Enviar a WhatsApp</button>
+    </div>
+</div>
+
+<footer>
+    <p>🔩 Ferretería G&C | Calidad, honestidad y confianza</p>
+    <p class="pie-pequeño">© 2026 — Todos los derechos reservados | Cochabamba, Bolivia</p>
+</footer>
+
+<script src="codigo.js"></script>
+</body>
+</html>
